@@ -1,0 +1,113 @@
+<div class="header">
+  <div class="logo">
+    <a (click)="goToHome()">
+      <img src="../../assets/logo.png" alt="MediConnect Logo">
+    </a>
+  </div>
+  <div class="welcome">
+    <h1>Welcome to MediConnect</h1>
+  </div>
+  <div class="auth-buttons">
+    <button *ngIf="!isAuthenticated()" (click)="goToLoginPage()" class="btn btn-primary">Login</button>
+    <button *ngIf="!isAuthenticated()" (click)="goToRegisterPage()" class="btn btn-success">Register</button>
+    <button *ngIf="isAuthenticated()" (click)="goToProfilePage()" class="btn btn-info">My Profile</button>
+    <button *ngIf="isAuthenticated()" (click)="logout()" class="btn btn-danger">Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="sidebar-left">
+    <ul>
+      <li><a (click)="goToHome()">Home</a></li>
+      <li><a (click)="goToDoctors()">Doctors</a></li>
+      <li><a (click)="goToServices()">Services</a></li>
+      <li  *ngIf="isAuthenticated()" ><a (click)="goToMyAppointments()">My Appointments</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="section">
+      <div class="insec1">
+      <div class="sec1">
+      <h2>Medical Platform MediConnect</h2>
+      <p>
+        A platform for doctors and patients, enabling patients to book online appointments and doctors to find clients. MediConnect offers a comprehensive and user-friendly service that streamlines the process of finding and booking medical appointments.
+      </p>      
+    </div>
+    <div class="sec2">
+      <img src="../../assets/platform.webp" alt="Platform" class="section-img">
+    </div>
+  </div>
+  <div class="insec2">
+    <div class="sec1">
+      <p>
+        The platform is designed for:
+      </p>
+    </div>
+    <div class="sec2">
+      <button (click)="scrollToSection('patients-section')" class="btn btn-outline-primary">Patients</button>
+      <button (click)="scrollToSection('doctors-section')" class="btn btn-outline-primary">Doctors</button>
+    </div>
+  </div>
+    </div>
+
+    <div id="patients-section" class="section">
+      <div class="insec1">
+        <div class="sec1">
+      <h2>Service for Finding Doctors and Clinics</h2>
+      <p>Quickly find a doctor and clinic, ask questions, and book an appointment online</p>
+    </div>
+    <div class="sec2">
+      <img src="../../assets/medpic.jpg" alt="medical" class="section-img">
+    </div>
+    </div>
+    <div class="insec2">
+      <div class="subsection">
+        <h3>Book an Appointment Online</h3>
+        <p>Select the right doctor in clinics that offer online booking</p>
+        <button (click)="goToBooking()" class="btn-custom">Go</button>
+      </div>
+      <div class="subsection">
+        <h3>Promotions and Discounts</h3>
+        <p>Find the best deals and prices on medical services</p>
+        <button (click)="goToOffers()" class="btn-custom">Go</button>
+      </div>
+    </div>
+    </div>
+
+    <div id="doctors-section" class="section">
+      <div class="insec1">
+        <div class="sec1">
+          <img src="../../assets/doctor.jpg" alt="doctor" class="section-img">
+        </div>
+        <div class="sec2">
+          <h2>Professional Services for Doctors</h2>
+          <p>Connect with patients, manage appointments, and grow your practice with our online tools</p>
+        </div>
+      </div>
+      <div class="insec2">
+      <div class="subsection">
+        <h3>Find Patients Online</h3>
+        <p>Register and conduct online consultations</p>
+        <button (click)="goToRegisterPage()" class="btn-custom">Go</button>
+      </div>
+      <div class="subsection">
+        <h3>What Our Clients Say</h3>
+          <p>"Excellent service and great support!"</p>
+          <p>"Highly recommend for online consultations."</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="sidebar-right">
+    <ul>
+      <li><a (click)="scrollToSection('doctors-section')">For Doctors</a></li>
+      <li><a (click)="scrollToSection('patients-section')">For Patients</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2024 MediConnect. All rights reserved.</p>
+</div>

@@ -1,0 +1,14 @@
+<div class="service-list-container">
+  <h2>Service List</h2>
+  <ul class="service-list">
+    <li *ngFor="let service of services" class="service-card" (click)="viewServiceDetails(service)">
+      <div class="service-info">
+        <div><strong>Name:</strong> {{ service.name }}</div>
+        <div><strong>Specialty:</strong> {{ service.specialty_name }}</div>
+      </div>
+    </li>
+  </ul>
+  <div class="button-container">
+    <button (click)="goHome()" class="btn btn-home">Home</button>
+  </div>
+</div>

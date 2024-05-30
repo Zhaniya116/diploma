@@ -1,0 +1,22 @@
+<div class="doctor-list-container">
+  <h2>Doctor List</h2>
+  <div *ngIf="doctors.length === 0" class="no-doctors-message">
+    <p>No doctors found with the specified specialty.</p>
+  </div>
+  <ul class="doctor-list">
+    <li *ngFor="let doctor of doctors" class="doctor-card" (click)="viewDoctorDetails(doctor)">
+      <div class="doctor-image-container">
+        <img class="doctor-image" src="../../assets/doctor.avif" alt="Doctor Image">
+      </div>
+      <div class="doctor-info">
+        <div><strong>Name:</strong> {{ doctor.first_name }} {{ doctor.lastName }}</div>
+        <div><strong>Specialty:</strong> {{ doctor.specialty_name }}</div>
+        <div><strong>Clinic Location:</strong> {{ doctor.clinic_location }}</div>
+        <div><strong>License Status:</strong> <span [ngClass]="{'verified': doctor.license_status === 'Verified', 'not-verified': doctor.license_status !== 'Verified'}"> {{ doctor.license_status }}</span></div>
+      </div>
+    </li>
+  </ul>
+  <div class="button-container">
+    <button (click)="goHome()" class="btn btn-home">Home</button>
+  </div>
+</div>

@@ -1,0 +1,100 @@
+body {
+    font-family: Helvetica;
+  }
+  
+  .appointments-container {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab button {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .tab button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px solid #007bff;
+  }
+  
+  .tabcontent {
+    padding: 20px;
+  }
+  
+  .no-appointments {
+    margin-bottom: 20px;
+  }
+  
+  .appointment-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .appointment-item {
+    list-style-type: none;
+    margin-left: 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .appointment-item:hover {
+    list-style-type: none;
+    background-color: #f0f0f0;
+  }
+  
+  .info {
+    margin-bottom: 8px;
+  }
+  
+  .info strong {
+    margin-right: 5px;
+    font-weight: bold;
+  }  
+  
+  .button-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

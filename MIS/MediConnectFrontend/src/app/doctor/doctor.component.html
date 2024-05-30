@@ -1,0 +1,33 @@
+<div class="doctor-details-container">
+  <h2>Doctor Details</h2>
+  <div *ngIf="doctor" class="doctor-card">
+    <div class="doctor-photo">
+      <img src="../../assets/doctor.avif" alt="Doctor Photo">
+    </div>
+    <div class="doctor-info">
+      <div class="doctor-info-item">
+        <strong>Name:</strong>
+        <span>{{ doctor.first_name }} {{ doctor.lastName }}</span>
+      </div>
+      <div class="doctor-info-item">
+        <strong>Specialty:</strong>
+        <span>{{ doctor.specialty_name }}</span>
+      </div>
+      <div class="doctor-info-item">
+        <strong>Clinic location:</strong>
+        <span>{{ doctor.clinic_location }}</span>
+      </div>
+      <div class="doctor-info-item">
+        <strong>License status:</strong>
+        <span>{{ doctor.license_status }}</span>
+      </div>
+      <div class="action-buttons">
+        <button (click)="scheduleAppointment(doctor.id)" class="btn btn-primary">Schedule Appointment</button>
+      </div>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button (click)="goHome()" class="btn btn-home">Home</button>
+  </div>
+</div>

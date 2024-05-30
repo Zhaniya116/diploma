@@ -1,0 +1,86 @@
+body {
+    font-family: 'Helvetica';
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .service-list-container {
+    font-family: 'Helvetica';
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-list-container h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-info {
+    flex: 1;
+  }
+  
+  .service-info div {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .service-info strong {
+    color: #333;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .btn-home {
+    background-color: #1fd5c6;
+    color: #fff;
+  }
+  
+  .btn-home:hover {
+    background-color: #21aea2;
+  }
+  

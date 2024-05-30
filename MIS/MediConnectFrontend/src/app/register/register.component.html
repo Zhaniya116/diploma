@@ -1,0 +1,46 @@
+<div class="register-container">
+  <h2>Registration</h2>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <form (ngSubmit)="registerUser()">
+    <div class="form-group">
+      <label for="first_name">Name:</label>
+      <input type="text" id="first_name" name="first_name" required [(ngModel)]="first_name">
+    </div>
+    <div class="form-group">
+      <label for="last_name">Surname:</label>
+      <input type="text" id="last_name" name="last_name" required [(ngModel)]="last_name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required [(ngModel)]="password">
+    </div>
+    <div class="form-group">
+    <label for="role">Role:</label>
+      <select id="role" name="role" required [(ngModel)]="role">
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="security_question">Security Question:</label>
+      <select id="security_question" name="security_question" required [(ngModel)]="security_question" class="form-control">
+        <option value="pet_name">What was the name of your first pet?</option>
+        <option value="mother_maiden_name">What is your mother's maiden name?</option>
+        <option value="first_school">What was the name of your first school?</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="security_answer">Answer:</label>
+      <input type="text" id="security_answer" name="security_answer" required [(ngModel)]="security_answer" class="form-control">
+    </div>
+    <button type="submit" class="btn">Register</button>
+  </form>
+  <div *ngIf="registrationResult">
+    {{ registrationResult }}
+  </div>
+  <button routerLink="/" class="btn-secondary">Home</button>
+</div>

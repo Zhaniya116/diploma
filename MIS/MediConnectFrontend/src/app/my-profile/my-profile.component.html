@@ -1,0 +1,43 @@
+<div class="profile-container">
+  <h1>My Profile</h1>
+  <div *ngIf="profile">
+    <div class="form-group">
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" [(ngModel)]="profile.first_name">
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" [(ngModel)]="profile.last_name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="profile.email">
+    </div>
+
+    <div *ngIf="profile.is_doctor">
+      <div class="form-group">
+        <label for="specialty">Specialty:</label>
+        <select id="specialty" [(ngModel)]="profile.specialty">
+          <option *ngFor="let specialty of specialties" [value]="specialty.id">{{ specialty.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="clinicLocation">Clinic Location:</label>
+        <input type="text" id="clinicLocation" [(ngModel)]="profile.clinic_location">
+      </div>
+      <div class="form-group">
+        <div class="verifysec">
+        <label>License Status:</label>
+        <span class="license-status">{{ profile.license_status || 'Not Verified' }}</span>
+      </div>
+        <button *ngIf="profile.license_status === 'Not Verified' || profile.license_status === 'Rejected'" (click)="goToVerification()" class="btn btn-verify">Verify License</button>
+      </div>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <button (click)="updateProfile()" class="btn btn-primary">Save</button>
+  </div>
+  <div *ngIf="isAuth">
+    <button (click)="onLogoutClick()" class="btn btn-secondary">Log out</button>
+  </div>
+  <button (click)="goHome()" class="btn btn-home">Home</button>
+</div>

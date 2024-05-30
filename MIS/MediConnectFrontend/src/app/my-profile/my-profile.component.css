@@ -1,0 +1,125 @@
+body {
+    font-family: 'Helvetica';
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-container {
+    font-family: 'Helvetica';
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .profile-container h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .profile-container .form-group {
+    margin-bottom: 20px;
+    font-family: 'Helvetica';
+  }
+  
+  .profile-container .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .profile-container .form-group input,
+  .profile-container .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .profile-container .form-group input:focus,
+  .profile-container .form-group select:focus {
+    border-color: #007bff;
+  }
+  
+  .license-status {
+    display: inline-block;
+    font-size: 16px;
+    color: #ff4d4f;
+    font-weight: bold;
+  }
+
+  .verifysec{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .error-message {
+    color: #ff4d4f;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: #2890ff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2d66a3;
+  }
+  
+  .btn-secondary {
+    background-color: #fd5b6b;
+    color: #fff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #be515c;
+  }
+  
+  .btn-verify {
+    background-color: #1fd5c6;
+    color: #fff;
+  }
+  
+  .btn-verify:hover {
+    background-color: #21aea2;
+  }
+  
+  .btn-home {
+    background-color: #dddddd;
+    color: black;
+    margin-top: 25px;
+  }
+  
+  .btn-home:hover {
+    background-color: #c2c1c1;
+  }
+  

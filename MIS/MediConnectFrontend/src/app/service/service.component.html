@@ -1,0 +1,26 @@
+<div class="cont">
+<div class="service-details-container">
+  <h2>Service Details</h2>
+
+  <div *ngIf="service" class="service-card">
+    <div class="service-info">
+      <div class="service-info-item">
+        <strong>Name:</strong>
+        <span>{{ service.name }}</span>
+      </div>
+      <div class="service-info-item">
+        <strong>Specialty:</strong>
+        <span>{{ service.specialty_name }}</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="button-container">
+    <button (click)="goBack()" class="btn btn-back">Back</button>
+  </div>
+</div>
+
+<div *ngIf="service"  class="doctor-list">
+  <app-doctors [specialty]="service.specialty_name"></app-doctors>
+</div>
+</div>

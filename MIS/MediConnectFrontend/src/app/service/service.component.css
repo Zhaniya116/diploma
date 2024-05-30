@@ -1,0 +1,90 @@
+body {
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cont{
+    margin-top: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .service-details-container {
+    font-family: 'Helvetica';
+    width: 41%;
+    margin: auto;
+    margin-left: 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-details-container h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .service-info-item {
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  .service-info-item strong {
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .service-info-item span {
+    color: #007bff;
+  }
+  
+  .doctor-list {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-back {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-back:hover {
+    background-color: #0056b3;
+  }
+  

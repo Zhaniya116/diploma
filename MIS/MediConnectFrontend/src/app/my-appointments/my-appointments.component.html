@@ -1,0 +1,51 @@
+<body>
+  <div class="appointments-container">
+    <h2>My Appointments</h2>
+    <div class="tab">
+      <button class="tablinks" (click)="openTab('upcoming')" [class.active]="activeTab === 'upcoming'">Upcoming Appointments</button>
+      <button class="tablinks" (click)="openTab('past')" [class.active]="activeTab === 'past'">Past Appointments</button>
+    </div>
+    
+    <div id="upcoming" class="tabcontent" *ngIf="activeTab === 'upcoming'">
+      <div *ngIf="upcomingAppointments.length === 0" class="no-appointments">
+        <p>You have no upcoming appointments.</p>
+      </div>
+      <ul class="appointment-list">
+        <li *ngFor="let appointment of upcomingAppointments" class="appointment-item" (click)="viewAppointmentDetails(appointment)">
+          <div class="info">
+            <strong>Doctor:</strong> {{ appointment.doctor_full_name }}
+          </div>
+          <div class="info">
+            <strong>Patient:</strong> {{ appointment.patient_full_name }}
+          </div>
+          <div class="info">
+            <strong>Date and Time:</strong> {{ appointment.date_and_time | date: 'd MMMM h:mm a' }}
+          </div>
+        </li>
+      </ul>      
+    </div>
+    
+    <div id="past" class="tabcontent" *ngIf="activeTab === 'past'">
+      <div *ngIf="pastAppointments.length === 0" class="no-appointments">
+        <p>You have no past appointments.</p>
+      </div>
+      <ul>
+        <li *ngFor="let appointment of pastAppointments" class="appointment-item">
+          <div (click)="viewAppointmentDetails(appointment)">
+            <strong>Doctor:</strong> {{ appointment.doctor_full_name }}
+          </div>
+          <div>
+            <strong>Patient:</strong> {{ appointment.patient_full_name }}
+          </div>
+          <div>
+            <strong>Date and Time:</strong> {{ appointment.date_and_time | date: 'd MMMM h:mm a' }}
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="button-container">
+      <button (click)="goHome()" class="btn btn-home">Home</button>
+    </div>
+  </div>
+</body>
